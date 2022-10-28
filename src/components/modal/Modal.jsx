@@ -10,18 +10,21 @@ import {
   ModalContainer,
   Background,
 } from "./ModalStyle";
-import products from "../../assets/product/main/products";
-import thumbnails from "../../assets/thumbnails/thumbnails";
 import { MdClose } from "react-icons/md";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import iconClose from "../../assets/icon-close.svg";
 import { useAppContext } from "../../context/AppContext";
 
 const Modal = () => {
-  const [selectedImage, setSelectedImage] = useState(products[0]);
-  const [activeThumbnail, setActiveThumbnail] = useState(0);
   const modalRef = useRef();
-  const { closeModal } = useAppContext();
+  const {
+    closeModal,
+    selectedImage,
+    setSelectedImage,
+    activeThumbnail,
+    setActiveThumbnail,
+    products,
+    thumbnails,
+  } = useAppContext();
 
   const closeModalBg = (e) => {
     if (modalRef.current === e.target) {

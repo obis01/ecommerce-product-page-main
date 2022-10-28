@@ -6,14 +6,18 @@ import {
   ThumbContainer,
   ThumbItem,
 } from "./GalleryStyle";
-import products from "../../assets/product/main/products";
-import thumbnails from "../../assets/thumbnails/thumbnails";
 import { useAppContext } from "../../context/AppContext";
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(products[0]);
-  const [activeThumbnail, setActiveThumbnail] = useState(0);
-  const { openModal } = useAppContext();
+  const {
+    openModal,
+    selectedImage,
+    setSelectedImage,
+    activeThumbnail,
+    setActiveThumbnail,
+    products,
+    thumbnails,
+  } = useAppContext();
 
   const handleClick = (i) => {
     setActiveThumbnail(i);

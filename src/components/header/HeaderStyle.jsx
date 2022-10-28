@@ -31,4 +31,15 @@ export const Right = styled.div`
 export const User = styled.img`
   width: 48px;
   height: 48px;
+  cursor: pointer;
+
+  &:hover {
+    outline: 2px solid var(--clr-primary);
+    border-radius: 50%;
+  }
+`;
+
+export const Popup = styled.div`
+  display: flex;
+  align-items: center;
 `;
