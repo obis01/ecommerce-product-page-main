@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --clr-primary: hsl(26, 100%, 55%);
+  --clr-white: hsl(25, 100%, 94%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-black: hsl(0, 0%, 0%);
+  --clr-neutral-gray-100: hsl(223, 64%, 98%);
+  --clr-neutral-gray-300: hsl(220, 14%, 75%);
+  --clr-neutral-gray-500: hsl(219, 9%, 45%);
+  --clr-neutral-gray-700: hsl(220, 13%, 13%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.icon-close {
+  font-size: 3em;
+  fill: var(--clr-primary);
+  display: flex;
+  align-self: end;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.icon-arr {
+  position: absolute;
+  font-size: 2em;
+  top: 50%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon-arr:hover {
+  fill: var(--clr-primary);
+}
+
+.icon-left-arr {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.icon-right-arr {
+  right: 0;
+  transform: translate(50%, -50%);
+}
