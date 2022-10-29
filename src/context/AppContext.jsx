@@ -8,7 +8,7 @@ export const AppProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(products[0]);
   const [activeThumbnail, setActiveThumbnail] = useState(0);
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [cartQt, setCartQt] = useState([]);
   const [total, setTotal] = useState(0);
 
@@ -25,13 +25,13 @@ export const AppProvider = ({ children }) => {
 
   const subtractQuantity = () => {
     setQuantity((quantity) => quantity - 1);
-    if (quantity === 0) {
-      setQuantity(0);
+    if (quantity === 1) {
+      setQuantity(1);
     }
   };
 
   const clearQuantity = () => {
-    setQuantity(0);
+    setQuantity(1);
   };
 
   const setCartQuantity = (quantity) => {

@@ -32,7 +32,7 @@ const Gallery = () => {
             key={i}
             style={
               activeThumbnail === i
-                ? { outline: "5px solid var(--clr-primary)" }
+                ? { outline: "2px solid var(--clr-primary)" }
                 : null
             }
           >

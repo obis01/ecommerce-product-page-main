@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { createPortal } from "react-dom";
 import { useAppContext } from "../../context/AppContext";
 import { BsTrash } from "react-icons/bs";
+import { productDesc } from "../../data/links";
 import {
   Background,
   AllContainer,
@@ -9,10 +10,22 @@ import {
   Content,
   TitleContainer,
   ContentContainer,
+  EmptyText,
+  CartItem,
+  ItemContent,
+  ItemThumb,
+  Left,
+  ItemDescBlock,
+  ItemTitle,
+  ItemPriceBlock,
+  PriceBlock,
+  Checkout,
+  TotalAmount,
 } from "./PopupStyle";
+const { title, price } = productDesc;
 
 const Popup = ({ setShowCart }) => {
-  const { clearCart } = useAppContext();
+  const { total, clearCart, thumbnails } = useAppContext();
   const popupRef = useRef();
   const closePopupBg = (e) => {
     if (popupRef.current === e.target) {
@@ -28,8 +41,32 @@ const Popup = ({ setShowCart }) => {
           </TitleContainer>
           <ContentContainer>
             <Content>
-              <p className="empty-text">Your cart is empty.</p>
-              <BsTrash onClick={clearCart} />
+              {total === 0 ? (
+                <EmptyText className="empty-text">
+                  Your cart is empty.
+                </EmptyText>
+              ) : (
+                <CartItem>
+                  <ItemContent>
+                    <Left>
+                      <ItemThumb src={thumbnails[0]} />
+                      <ItemDescBlock>
+                        <ItemTitle>{title}</ItemTitle>
+                        <ItemPriceBlock>
+                          <PriceBlock>
+                            ${price.toFixed(2)} x {total}
+                            <TotalAmount>
+                              ${(price * total).toFixed(2)}
+                            </TotalAmount>
+                          </PriceBlock>
+                        </ItemPriceBlock>
+                      </ItemDescBlock>
+                    </Left>
+                    <BsTrash className="trash-icon" onClick={clearCart} />
+                  </ItemContent>
+                  <Checkout>Checkout</Checkout>
+                </CartItem>
+              )}
             </Content>
           </ContentContainer>
         </PopupContainer>

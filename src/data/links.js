@@ -1,7 +1,7 @@
 export const links = [
   {
     id: 1,
-    name: "Collection",
+    name: "Collections",
   },
   {
     id: 2,

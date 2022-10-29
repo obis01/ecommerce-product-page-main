@@ -1,6 +1,23 @@
-import { Container } from "./DescriptionStyle";
+import {
+  Wrapper,
+  Container,
+  Brand,
+  Title,
+  Desc,
+  Price,
+  PriceBlock,
+  PriceContainer,
+  Discount,
+  ExPrice,
+  QtBlock,
+  Quantity,
+  Form,
+  AddToCart,
+  AddText,
+} from "./DescriptionStyle";
 import { productDesc } from "../../data/links";
-import { BiPlus, BiMinus } from "react-icons/bi";
+import { GoPlus, GoDash } from "react-icons/go";
+import { BsCart3 } from "react-icons/bs";
 import { useAppContext } from "../../context/AppContext";
 
 const Description = () => {
@@ -20,26 +37,31 @@ const Description = () => {
   };
 
   return (
-    <div>
-      <h3>{brand}</h3>
-      <h1>{title}</h1>
-      <p>{desc}</p>
-      <div>
-        <div>
-          <h2>${price.toFixed(2)}</h2>
-          <p>{discount}</p>
-        </div>
-        ${exPrice.toFixed(2)}
-      </div>
-      <form>
-        <div>
-          <BiMinus onClick={subtractQuantity} />
-          <p>{quantity}</p>
-          <BiPlus onClick={addQuantity} />
-        </div>
-        <button onClick={handleAddToCart}>Add to cart</button>
-      </form>
-    </div>
+    <Wrapper>
+      <Container>
+        <Brand>{brand}</Brand>
+        <Title>{title}</Title>
+        <Desc>{desc}</Desc>
+        <PriceContainer>
+          <PriceBlock>
+            <Price>${price.toFixed(2)}</Price>
+            <Discount>{discount}</Discount>
+          </PriceBlock>
+          <ExPrice>${exPrice.toFixed(2)}</ExPrice>
+        </PriceContainer>
+        <Form>
+          <QtBlock>
+            <GoDash className="qt-icon" onClick={subtractQuantity} />
+            <Quantity>{quantity}</Quantity>
+            <GoPlus className="qt-icon" onClick={addQuantity} />
+          </QtBlock>
+          <AddToCart onClick={handleAddToCart}>
+            <BsCart3 />
+            <AddText>Add to cart</AddText>
+          </AddToCart>
+        </Form>
+      </Container>
+    </Wrapper>
   );
 };
 export default Description;

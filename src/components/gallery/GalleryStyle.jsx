@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
 `;
 
 export const MainImage = styled.img`
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 445px;
+  max-height: 445px;
   border-radius: 10px;
   margin-bottom: 2rem;
   cursor: pointer;
@@ -16,18 +16,21 @@ export const MainImage = styled.img`
 export const Thumbnail = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 30px;
+  max-width: 445px;
 `;
 
 export const ThumbContainer = styled.div`
   border-radius: 10px;
-  width: 176px;
-  height: 176px;
+  width: 90px;
+  height: 90px;
 `;
 
 export const ThumbItem = styled.img`
   cursor: pointer;
   border-radius: 10px;
+  width: 90px;
+  height: 90px;
 
   &:hover {
     opacity: 0.8;

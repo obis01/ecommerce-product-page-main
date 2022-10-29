@@ -29,21 +29,28 @@ export const ImageContainer = styled.div`
 `;
 
 export const MainImage = styled.img`
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 550px;
+  max-height: 550px;
   border-radius: 10px;
+  margin-bottom: 2rem;
+
+  &::selection {
+    background-color: transparent;
+  }
 `;
 
 export const Thumbnail = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 445px;
 `;
 
 export const ThumbContainer = styled.div`
   border-radius: 10px;
-  width: 176px;
-  height: 176px;
+  width: 90px;
+  height: 90px;
   background-color: #fff;
 `;
 
@@ -53,5 +60,9 @@ export const ThumbItem = styled.img`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &::selection {
+    background-color: transparent;
   }
 `;
