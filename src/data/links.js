@@ -1,4 +1,4 @@
-const links = [
+export const links = [
   {
     id: 1,
     name: "Collection",
@@ -21,4 +21,11 @@ const links = [
   },
 ];
 
-export default links;
+export const productDesc = {
+  brand: "Sneaker Company",
+  title: "Fall Limited Edition Sneakers",
+  desc: "These low-profile sneakers are your perfect casual wear companion. Featuring adurable rubber outer sole, they’ll withstand everything the weather can offer.",
+  price: 125,
+  discount: "50%",
+  exPrice: 250,
+};

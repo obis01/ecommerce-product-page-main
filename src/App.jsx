@@ -19,8 +19,9 @@ function App() {
 }
 
 const Wrapper = styled.div`
-  width: 1440px;
-  position: relative;
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
 `;
 
 export default App;

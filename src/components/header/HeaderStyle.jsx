@@ -5,6 +5,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding-block: 2rem;
   border-bottom: 1px solid var(--clr-neutral-gray-300);
+  position: relative;
 `;
 
 export const Left = styled.ul`
@@ -25,6 +26,12 @@ export const Left = styled.ul`
 
 export const Right = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
   align-items: center;
 `;
 
@@ -39,7 +46,7 @@ export const User = styled.img`
   }
 `;
 
-export const Popup = styled.div`
-  display: flex;
-  align-items: center;
+export const Cart = styled.img`
+  margin-right: 2rem;
+  cursor: pointer;
 `;
