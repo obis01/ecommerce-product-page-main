@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://obis01.github.io/ecommerce-product-page-main/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
