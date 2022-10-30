@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Modal from "./components/modal/Modal";
 import Menu from "./components/menu/Menu";
 import { useAppContext } from "./context/AppContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const { showModal, showMenu } = useAppContext();
@@ -13,8 +14,14 @@ function App() {
       <Wrapper>
         <Header />
         <Main />
-        {showModal && <Modal />}
-        {showMenu && <Menu />}
+        <AnimatePresence
+          initial={false}
+          exitBeforeEnter={true}
+          onExitComplete={() => null}
+        >
+          {showModal && <Modal />}
+          {showMenu && <Menu />}
+        </AnimatePresence>
       </Wrapper>
     </>
   );

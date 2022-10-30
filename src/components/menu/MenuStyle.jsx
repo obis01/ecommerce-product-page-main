@@ -1,6 +1,20 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled.div`
+export const Background = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+`;
+
+export const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -15,19 +29,6 @@ export const Wrapper = styled.div`
   @media (min-width: 679px) {
     padding-left: 2.5%;
   }
-`;
-
-export const Background = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
 `;
 
 export const Links = styled.ul`

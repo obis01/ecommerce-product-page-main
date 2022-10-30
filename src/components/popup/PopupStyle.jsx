@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Background = styled.div`
   width: 100%;
@@ -72,6 +73,11 @@ export const Content = styled.div`
   height: 100%;
   text-align: center;
   width: 360px;
+
+  @media (max-width: 678px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const CartItem = styled.div`
@@ -119,7 +125,7 @@ export const ItemThumb = styled.img`
   border-radius: 5px;
 `;
 
-export const Checkout = styled.button`
+export const Checkout = styled(motion.button)`
   all: unset;
   display: flex;
   justify-content: center;

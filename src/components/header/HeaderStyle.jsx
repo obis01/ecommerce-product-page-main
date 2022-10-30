@@ -53,7 +53,7 @@ cursor: pointer;
 
 export const HamburgerContainer = styled.div`
   position: absolute;
-  @media (min-width: 920px) {
+  @media (min-width: 921px) {
     display: none;
   }
 `;

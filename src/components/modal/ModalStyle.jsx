@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Background = styled.div`
+export const Background = styled(motion.div)`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -16,7 +17,7 @@ export const Background = styled.div`
   }
 `;
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;

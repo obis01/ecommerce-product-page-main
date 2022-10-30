@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -125,7 +126,7 @@ export const Form = styled.form`
   }
 `;
 
-export const AddToCart = styled.button`
+export const AddToCart = styled(motion.button)`
   all: unset;
   display: flex;
   align-items: center;

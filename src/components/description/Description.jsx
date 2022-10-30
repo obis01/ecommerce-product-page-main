@@ -55,7 +55,11 @@ const Description = () => {
             <Quantity>{quantity}</Quantity>
             <GoPlus className="qt-icon" onClick={addQuantity} />
           </QtBlock>
-          <AddToCart onClick={handleAddToCart}>
+          <AddToCart
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleAddToCart}
+          >
             <BsCart3 />
             <AddText>Add to cart</AddText>
           </AddToCart>

@@ -51,8 +51,14 @@ const Modal = () => {
   };
 
   return createPortal(
-    <Background ref={modalRef} onClick={closeModalBg}>
-      <ModalContainer>
+    <Background
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      ref={modalRef}
+      onClick={closeModalBg}
+    >
+      <ModalContainer whileTap={{ scale: 1.01 }}>
         <Wrapper>
           <MdClose className="icon-close" onClick={() => closeModal()} />
           <ImageContainer>
