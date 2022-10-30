@@ -49,7 +49,9 @@ const Menu = () => {
         <Links>
           {links.map((link) => (
             <li key={link.id}>
-              <a href="#">{link.name}</a>
+              <a href="#" onClick={closeMenu}>
+                {link.name}
+              </a>
             </li>
           ))}
         </Links>
