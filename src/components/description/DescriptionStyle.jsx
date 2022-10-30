@@ -3,6 +3,15 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   max-width: 445px;
+
+  @media (max-width: 920px) {
+    max-width: 565px;
+  }
+
+  @media (max-width: 678px) {
+    width: 87.2%;
+    margin: 0 auto;
+  }
 `;
 
 export const Container = styled.div`
@@ -28,6 +37,10 @@ export const Title = styled.h1`
   );
   line-height: 1;
   margin-bottom: 2rem;
+
+  @media (max-width: 678px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Desc = styled.p`
@@ -46,6 +59,13 @@ export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 920px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const PriceBlock = styled.div`
@@ -72,6 +92,10 @@ export const ExPrice = styled.p`
   text-decoration: line-through;
   font-weight: 700;
   margin-bottom: 2rem;
+
+  @media (max-width: 920px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const QtBlock = styled.div`
@@ -83,6 +107,11 @@ export const QtBlock = styled.div`
   width: 35%;
   max-width: 150px;
   border-radius: 10px;
+
+  @media (max-width: 678px) {
+    width: 100%;
+    max-width: unset;
+  }
 `;
 
 export const Form = styled.form`
@@ -90,6 +119,10 @@ export const Form = styled.form`
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+
+  @media (max-width: 678px) {
+    flex-direction: column;
+  }
 `;
 
 export const AddToCart = styled.button`
@@ -108,6 +141,12 @@ export const AddToCart = styled.button`
 
   &:hover {
     background-color: #ffac6a;
+  }
+
+  @media (max-width: 678px) {
+    width: 100%;
+    max-width: unset;
+    padding: 1rem 0;
   }
 `;
 

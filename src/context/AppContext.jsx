@@ -11,12 +11,21 @@ export const AppProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(1);
   const [cartQt, setCartQt] = useState([]);
   const [total, setTotal] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
   };
   const closeModal = () => {
     setShowModal(false);
+  };
+
+  const openMenu = () => {
+    setShowMenu(true);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
   };
 
   const addQuantity = () => {
@@ -71,6 +80,9 @@ export const AppProvider = ({ children }) => {
         cartQt,
         clearCart,
         total,
+        openMenu,
+        showMenu,
+        closeMenu,
       }}
     >
       {children}

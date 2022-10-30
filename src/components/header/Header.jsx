@@ -15,20 +15,27 @@ import { links } from "../../data/links";
 import logo from "../../assets/logo.svg";
 import userIcon from "../../assets/image-avatar.png";
 import { BsCart3 } from "react-icons/bs";
+import { CgMenu } from "react-icons/cg";
 import Popup from "../popup/Popup";
 import { useAppContext } from "../../context/AppContext";
 
 const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { total } = useAppContext();
+  const { total, openMenu } = useAppContext();
   return (
     <Nav>
       <Left>
-        <HamburgerContainer onClick={() => setIsOpen(!isOpen)}>
-          <div className={isOpen ? "icon-one active-one" : "icon-one"}>
+        <HamburgerContainer
+          onClick={() => {
+            setIsOpen(!isOpen);
+            openMenu();
+          }}
+        >
+          <CgMenu className="open-icon" />
+          {/* <div className={isOpen ? "icon-one active-one" : "icon-one"}>
             <div className="hamburger hamburger-one"></div>
-          </div>
+          </div> */}
         </HamburgerContainer>
         <img className="logo" src={logo} alt="sneakers logo" />
         <Links>

@@ -31,6 +31,19 @@ export const PopupContainer = styled.div`
   min-height: 250px;
   border-radius: 10px;
   background-color: #fff;
+
+  @media (max-width: 920px) {
+    transform: translate(0, 32%);
+  }
+
+  @media (max-width: 678px) {
+    right: 0;
+    top: 0;
+    transform: translate(0, 75px);
+    width: 100%;
+    height: 280px;
+    z-index: 2;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -46,6 +59,10 @@ export const ContentContainer = styled.div`
   height: 100%;
   width: 100%;
   text-align: center;
+
+  @media (max-width: 678px) {
+    padding: 1rem;
+  }
 `;
 
 export const Content = styled.div`

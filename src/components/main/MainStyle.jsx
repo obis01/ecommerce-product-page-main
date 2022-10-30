@@ -11,5 +11,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 0;
+    margin-inline: 0;
   }
 `;

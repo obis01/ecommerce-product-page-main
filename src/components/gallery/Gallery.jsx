@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import {
   Wrapper,
+  ImageContainer,
   MainImage,
   Thumbnail,
   ThumbContainer,
@@ -22,10 +24,42 @@ const Gallery = () => {
   const handleClick = (i) => {
     setActiveThumbnail(i);
   };
+  const prevImage = () => {
+    const specificImage = products.find((product) => product === selectedImage);
+    let newId = products.indexOf(specificImage) - 1;
+    if (newId < 0) {
+      newId = products.length - 1;
+    }
+    setSelectedImage(products[newId]);
+    setActiveThumbnail(newId);
+  };
+  const nextImage = () => {
+    const specificImage = products.find((product) => product === selectedImage);
+    let newId = products.indexOf(specificImage) + 1;
+    if (newId > products.length - 1) {
+      newId = 0;
+    }
+    setSelectedImage(products[newId]);
+    setActiveThumbnail(newId);
+  };
 
   return (
     <Wrapper>
-      <MainImage src={selectedImage} alt="shoes" onClick={() => openModal()} />
+      <ImageContainer>
+        <BsChevronLeft
+          className="icon-arr icon-left-arr icon-arr-main"
+          onClick={() => prevImage()}
+        />
+        <MainImage
+          src={selectedImage}
+          alt="shoes"
+          onClick={() => openModal()}
+        />
+        <BsChevronRight
+          className="icon-arr icon-right-arr icon-arr-main"
+          onClick={() => nextImage()}
+        />
+      </ImageContainer>
       <Thumbnail>
         {thumbnails.map((thumbnail, i) => (
           <ThumbContainer

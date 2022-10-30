@@ -10,6 +10,11 @@ export const Nav = styled.nav`
     border-bottom: none;
     padding-block: 20px;
   }
+
+  @media (max-width: 678px) {
+    width: 87.2%;
+    margin: 0 auto;
+  }
 `;
 
 export const Links = styled.ul`
@@ -84,6 +89,15 @@ export const User = styled.img`
     outline: 2px solid var(--clr-primary);
     border-radius: 50%;
   }
+
+  @media (max-width: 678px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 450px) {
+    margin-right: 1.5rem;
+  }
 `;
 
 export const CartContainer = styled.div`
@@ -103,6 +117,11 @@ export const Total = styled.p`
   border-radius: 10px;
   font-weight: 700;
   position: absolute;
-  top: 5px;
-  left: 10px;
+  top: 8px;
+  left: 6px;
+
+  @media (max-width: 678px) {
+    top: -7px;
+    left: 7px;
+  }
 `;
