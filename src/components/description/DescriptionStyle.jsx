@@ -140,8 +140,10 @@ export const AddToCart = styled(motion.button)`
   -webkit-box-shadow: 0px 10px 16px 0px rgba(255, 125, 26, 0.5);
   box-shadow: 0px 10px 16px 0px rgba(255, 125, 26, 0.5);
 
-  &:hover {
-    background-color: #ffac6a;
+  @media (min-width: 921px) {
+    &:hover {
+      background-color: #ffac6a;
+    }
   }
 
   @media (max-width: 678px) {

@@ -18,7 +18,7 @@ export const AllContainer = styled.div`
   position: relative;
 `;
 
-export const PopupContainer = styled.div`
+export const PopupContainer = styled(motion.div)`
   position: absolute;
   right: 0;
   top: 0;

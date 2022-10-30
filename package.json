@@ -1,9 +1,9 @@
 {
   "name": "ecommerce-product-page-main",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
-  "type": "module",
   "homepage": "https://obis01.github.io/ecommerce-product-page-main/",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",

@@ -17,6 +17,7 @@ import userIcon from "../../assets/image-avatar.png";
 import { BsCart3 } from "react-icons/bs";
 import { CgMenu } from "react-icons/cg";
 import Popup from "../popup/Popup";
+import { motion, AnimatePresence } from "framer-motion";
 import { useAppContext } from "../../context/AppContext";
 
 const Header = () => {
@@ -53,7 +54,13 @@ const Header = () => {
             {total > 0 && <Total>{total}</Total>}
           </CartContainer>
           <User src={userIcon} alt="user" />
-          {showCart && <Popup setShowCart={setShowCart} />}
+          <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            onExitComplete={() => null}
+          >
+            {showCart && <Popup setShowCart={setShowCart} />}
+          </AnimatePresence>
         </IconsContainer>
       </Right>
     </Nav>

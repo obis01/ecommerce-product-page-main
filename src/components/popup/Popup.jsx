@@ -35,7 +35,11 @@ const Popup = ({ setShowCart }) => {
   return createPortal(
     <Background ref={popupRef} onClick={closePopupBg}>
       <AllContainer>
-        <PopupContainer>
+        <PopupContainer
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           <TitleContainer>
             <p className="cart">Cart</p>
           </TitleContainer>
