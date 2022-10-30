@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/obis01/ecommerce-product-page-main)
-- Live Site URL: [Add live site URL here](https://obis01.github.io/ecommerce-product-page-main/)
+- Solution URL: [GitHub](https://github.com/obis01/ecommerce-product-page-main)
+- Live Site URL: [Live site](https://obis01.github.io/ecommerce-product-page-main/)
 
 ## My process
 
